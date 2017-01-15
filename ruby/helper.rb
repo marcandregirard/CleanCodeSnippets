@@ -11,4 +11,9 @@ class Helper
         f.write(json_object.to_json)
       end
     end
+    
+    def print_methods
+       p ("test".public_methods - Object.methods).sort 
+       p "test".public_methods.map(&:to_s).grep(/^child*/)
+    end
 end
